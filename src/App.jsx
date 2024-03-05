@@ -1,11 +1,16 @@
+import HomePage from "./components/HomePage";
+import AddForm from "./components/AddForm";
+import UpdateForm from "./components/UpdateForm";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/add" element={<AddForm />} />
+        <Route path="/update/:id" element={<UpdateForm />} />
       </Routes>
     </Router>
   );
